@@ -22,7 +22,7 @@ $(document).ready(function() {
             var $columnCardList = $('<ul>').addClass('column-card-list');
             var $columnDelete = $('<button>').addClass('btn-delete').text('x');
             var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj kartę');
-            }
+            
             // podpinanie odpowiednich zdarzeń
             $columnDelete.click(function() {
                 self.removeColumn();
@@ -39,8 +39,7 @@ $(document).ready(function() {
             // zwracanie stworzonej kolumny
             return $column;
         }
-    }
-    
+    }    
     Column.prototype = {
         addCard: function(card) {
             this.$element.children('ul').append(card.$element);
